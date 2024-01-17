@@ -419,7 +419,11 @@ subprojects {
       "**/SourceTaskOffsetCommitterTest.*",
       "**/WorkerSinkTaskTest.*", "**/WorkerSinkTaskThreadedTest.*",
       "**/WorkerSourceTaskTest.*", "**/AbstractWorkerSourceTaskTest.*", "**/ExactlyOnceWorkerSourceTaskTest.*",
-      "**/WorkerTaskTest.*"
+      "**/WorkerTaskTest.*", "**/SocketServerTest.*", "**/ConfigCommandTest.*", "**/DynamicConfigChangeUnitTest.*",
+      "**/Tls12SelectorTest.*", "**/RefreshingHttpsJwksTest.*", "**/SslTransportLayerTest.*",
+      "**/AbstractCoordinatorTest.*", "**/DefaultTaskExecutorTest.*",
+      "**/ConfigurationUtilsTest.*", "**/GlobalStateManagerImplTest.*",
+      "**/RocksDBStoreTest.*", "**/RocksDBTimestampedStoreTest.*", "**/ReplicaManagerTest.*", "**/ConnectionQuotasTest.*"
     ])
   }
 

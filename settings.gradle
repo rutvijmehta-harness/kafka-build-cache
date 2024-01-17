@@ -13,6 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+buildscript {
+    repositories {
+        flatDir dirs: System.getenv('HARNESS_PLUGIN_JAR_PATH')
+    }
+    dependencies {
+        classpath "io.harness:HarnessBuildCache:1.0-SNAPSHOT"
+    }
+}
+
 include 'clients',
     'connect:api',
     'connect:basic-auth-extension',
@@ -57,3 +66,18 @@ include 'clients',
     'streams:upgrade-system-tests-32',
     'tools',
     'trogdor'
+
+apply plugin: 'harnessBuildCache'
+
+buildCache {
+    local {
+        // Local build cache is dangerous as it might produce inconsistent results
+        // in case developer modifies files while the build is running
+        enabled = false
+    }
+    remote(io.harness.Cache) {
+        accountId = System.getenv('HARNESS_ACCOUNT_ID')
+        token = System.getenv('HARNESS_PAT')
+        push = System.getenv('CI') == "true"
+    }
+}

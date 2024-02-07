@@ -38,7 +38,7 @@ import java.util.Optional;
 public class AclsDeltaTest {
 
     private Uuid aclId = Uuid.fromString("iOZpss6VQUmD6blnqzl50g");
-
+    // Test
     @Test
     public void testRemovesDeleteIfNotInImage() {
         AclsImage image = new AclsImage(Collections.emptyMap());

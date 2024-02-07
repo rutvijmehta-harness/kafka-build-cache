@@ -33,7 +33,7 @@ public class BrokerRegistrationFencingChangeTest {
         assertEquals((byte) 0, BrokerRegistrationFencingChange.NONE.value());
         assertEquals((byte) -1, BrokerRegistrationFencingChange.UNFENCE.value());
     }
-
+    // Test comment
     @Test
     public void testAsBoolean() {
         assertEquals(Optional.of(true), BrokerRegistrationFencingChange.FENCE.asBoolean());

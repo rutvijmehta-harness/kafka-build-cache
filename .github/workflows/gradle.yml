@@ -2,7 +2,7 @@ name: Java Build with Gradle
 
 on:
   pull_request:
-    branches: [ "trunk" ]
+    branches: [ "main" ]
 
 permissions:
   contents: read

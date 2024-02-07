@@ -15,13 +15,15 @@
 
 buildscript {
     repositories {
-        flatDir dirs: System.getenv('HARNESS_PLUGIN_JAR_PATH')
+        mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
     }
     dependencies {
-        classpath "io.harness:HarnessBuildCache:1.0-SNAPSHOT"
+        classpath 'com.github.drone:gradle-build-cache-plugin:0.0.2'
     }
 }
-
 include 'clients',
     'connect:api',
     'connect:basic-auth-extension',

@@ -78,5 +78,6 @@ buildCache {
         accountId = System.getenv('HARNESS_ACCOUNT_ID')
         token = System.getenv('HARNESS_PAT')
         push = System.getenv('CI') == "true"
+        endpoint = System.getenv('HARNESS_CACHE_SERVICE_ENDPOINT')
     }
 }
